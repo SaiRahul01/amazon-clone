@@ -1,0 +1,78 @@
+body{    
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.header{
+    height:60px;
+    display: flex;
+    background-color: #131921;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    margin: 0!important ;
+
+
+    align-items: center;
+    width: 100%;
+left: 0;
+
+}
+.logo{
+    width: 100px;
+    object-fit: contain;
+    margin: 0 20px;
+    margin-top: 10px;
+}
+.searchbar{
+    height: 25px;
+    display: flex;
+    align-items: center;
+    flex: 1;
+
+   
+}
+.searchbar1{
+    width: 800px;
+    margin-left: 40px;
+    border-radius: 4px;
+   padding: 10px;
+   border: orange;
+
+}
+.searchbarr{
+
+    background-color: #cd9042;
+    height: 35px!important;
+    width: 40px!important;
+    border-radius: 4px;
+    color: black;
+}
+.navbar_nav{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 15px;
+
+}
+.navitem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.nv{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.carticon{
+    height: 50px!important;
+    width: 40px!important;
+}
+.cnt{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+}

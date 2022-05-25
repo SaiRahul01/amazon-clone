@@ -1,15 +1,24 @@
 import React from 'react'
 import './Navbar.css'
+import {Typography} from '@mui/material'
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+
+
+import SearchIcon from '@mui/icons-material/Search';
 
 
 export default function Navbar() {
   return (
     <div className='header'>
-        <img src="https://cdn.iconscout.com/icon/free/png-64/amazon-1869030-1583154.png" alt="" />
+        <img className='logo' src="https://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="" />
         <div className="searchbar">
-            <input type="text" />
+            <input className="searchbar1" type="text" />
+            {/* <FontAwesomeIcon className='searchbarr' icon="fa-solid fa-magnifying-glass" /> */}
+
+            <SearchIcon className='searchbarr'/>
 
         </div>
+
         <div className="navbar_nav">
             <div className="navitem">
                 <span>Hello Guest</span>
@@ -17,13 +26,20 @@ export default function Navbar() {
 
             </div>
             <div className="navitem">
-                <span>Orders</span>
+                <span>Returns & Orders</span>
                 
             </div>
-            <div className="navitem">
-                <span>Cart</span>
+          
+            <div className="navitem nv">
+            <ShoppingCartOutlinedIcon className='carticon'/>
+            <span className='cnt'><div style={{color:'orange '}}> 8</div> <span>Cart</span></span>
+               
                 
             </div>
+        </div>
+        <div className="carticon">
+            
+
         </div>
         
     </div>

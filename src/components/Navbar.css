@@ -34,6 +34,7 @@ left: 0;
 }
 .searchbar1{
     width: 800px;
+    max-width: 100%;
     margin-left: 40px;
     border-radius: 4px;
    padding: 10px;

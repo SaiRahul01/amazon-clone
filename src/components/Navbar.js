@@ -9,7 +9,7 @@ import SearchIcon from '@mui/icons-material/Search';
 
 export default function Navbar() {
   return (
-    <div className='header'>
+    <div id='header' className='header'>
         <img className='logo' src="https://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="" />
         <div className="searchbar">
             <input className="searchbar1" type="text" />

@@ -32,22 +32,29 @@ left: 0;
 
    
 }
+.signoutbtn{
+    background-color: #131921;
+    color: white;
+    border: none;
+}
 .searchbar1{
     width: 800px;
     max-width: 100%;
-    margin-left: 40px;
+    margin-left: 140px;
     border-radius: 4px;
    padding: 10px;
    border: orange;
+   height: 40px;
 
 }
 .searchbarr{
 
-    background-color: #cd9042;
-    height: 35px!important;
+    background-color: #febd69;
+    height: 40px!important;
     width: 40px!important;
     border-radius: 4px;
     color: black;
+    padding: 7px;
 }
 .navbar_nav{
     display: flex;
@@ -76,4 +83,13 @@ left: 0;
     margin-left: 10px;
     display: flex;
     flex-direction: column;
+}
+.loginlink{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+.loginlink:hover{
+    color: white;
 }

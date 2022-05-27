@@ -1,8 +1,26 @@
 import React from 'react'
 import './Product.css'
 import Button from '@mui/material/Button';
+import { useStateValue } from './Stateprovider';
 
-export default function Product({title,price,rating,image,fs}) {
+export default function Product({title,price,rating,image,fs,id}) {
+
+  const [{basket},dispatch]=useStateValue()
+
+  const addToBasket=()=>{
+    dispatch({
+      type:'ADD_TO_BASKET',
+      item:{
+        id:id,
+        title:title,
+        image:image,
+        price:price,
+        rating:rating
+      }
+
+    })
+
+  }
   return (
     <div className='product'>
         <div className="product_info">
@@ -17,7 +35,7 @@ export default function Product({title,price,rating,image,fs}) {
             )}
         </div>
         <img src={image} alt="" />
-        <Button className='addbtn' variant="contained">Add to Cart</Button>
+        <Button onClick={addToBasket} className='addbtn' variant="contained">Add to Cart</Button>
 
     </div>
   )

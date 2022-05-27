@@ -1,0 +1,10 @@
+.totalcost{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 5px;
+}
+.totalcost>input{
+    margin-right: 50px;
+}

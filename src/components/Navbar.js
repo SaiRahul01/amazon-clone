@@ -19,6 +19,9 @@ export default function Navbar() {
         if(user){
             auth.signOut();
             navi("/")
+            dispath({
+                type:'CLEAR_ITEMS'
+            })
 
         }
 
@@ -40,7 +43,7 @@ export default function Navbar() {
 
         <div className="navbar_nav">
             <div className="navitem">
-            <span>Hello {auth.displayName} </span>
+            <span>Hello </span>
                 <div className='loginlink'>
                 
                 <span>{user?<button onClick={handlesignout} className='signoutbtn'>Sign out</button>:<button onClick={handlesignin} className='signoutbtn'>Sign In</button>}</span>

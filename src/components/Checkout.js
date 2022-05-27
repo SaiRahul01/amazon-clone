@@ -10,7 +10,7 @@ import Totalcost from './Totalcost'
 
 export default function Checkout() {
 
-    const [{basket},dispatch]=useStateValue()
+    const [{basket,user},dispatch]=useStateValue()
     
   return (
     <>
@@ -20,12 +20,13 @@ export default function Checkout() {
     <h1 className='oopstext'>Your Shopping cart is Empty</h1>
     <Link to="/"><button className='additemsbutton'>Shop Items</button></Link>
     </div> :<div className='checkout text-center'>
+        
         <div className="checkout_left">
             <img src="" alt="" />
             <div className="checkout_title">
                 <h2 className='text-cente carttitle' >Your Shopping Cart</h2>
             </div>
-            <div>
+            <div className='checkout_left1'>
                 {basket.map(item=>(
                     <CheckoutProduct
                     id={item.id}
@@ -40,13 +41,14 @@ export default function Checkout() {
         </div>
         <div className="checkout_right">
         <img src="" alt="" />
-            <h2>Your subtotal</h2>
+        <h2>Hello {user?user.email:'Guest'}</h2><br /><br />    
+            <h4>Your subtotal</h4>
             <Totalcost/>
             <button  className='button'>Proceed to Pay</button>
 
         </div>
     </div>}
-    <Footer/>
+    
     </>
   )
 }

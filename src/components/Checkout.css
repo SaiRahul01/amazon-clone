@@ -2,13 +2,13 @@
     height: 2000px;
     display: flex;
 flex-direction: row;
-background-color: #eaeded;
+background-color: white;
 }
 .text-center{
     text-align: center;
 }
 .carttitle{
-    border-bottom: 1px solid lightgray;
+   
 }
 .emptycartimage{
     margin-left: 45%;
@@ -37,6 +37,12 @@ background-color: #eaeded;
     margin-top: 50px;
     height: 1900px;
     background-color: white;
+    
+}
+.checkout_left1{
+    border-right: 1px solid rgb(159, 156, 156);
+   
+
 }
 .checkout_right{
     margin-left: 10px;

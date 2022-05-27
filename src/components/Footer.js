@@ -63,7 +63,7 @@ export default function Footer() {
                             </div>
 
                         </div>
-                        <hr className='gg' style={{width:'2000px',left:'0',paddingLeft:'0',margin:'30px -20px 20px',border:'0',borderTop: '1px solid #c9c7c7'}} />
+                        <hr className='gg' style={{width:'2000px',left:'0',marginBottom:'20px',paddingLeft:'0',margin:'60px -20px 20px',border:'0',borderTop: '1px solid #c9c7c7'}} />
                         <br /><br />
                         <div className="footbanner">
                             <div className='a'><img src="https://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="" className="bottomicon" /></div>

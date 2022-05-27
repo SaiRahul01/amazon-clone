@@ -2,12 +2,19 @@ import React from 'react'
 import './Product.css'
 import Button from '@mui/material/Button';
 import { useStateValue } from './Stateprovider';
+import { useNavigate } from 'react-router-dom';
 
 export default function Product({title,price,rating,image,fs,id}) {
 
-  const [{basket},dispatch]=useStateValue()
+  let navi=useNavigate("/")
+
+  const [{basket,user},dispatch]=useStateValue()
 
   const addToBasket=()=>{
+    if(user===null){
+      navi("/login")
+
+    }
     dispatch({
       type:'ADD_TO_BASKET',
       item:{

@@ -4,21 +4,33 @@ import { Link } from 'react-router-dom'
 import './Checkout.css'
 import CheckoutProduct from './CheckoutProduct'
 import Footer from './Footer'
+import { useNavigate } from 'react-router-dom'
 import Navbar from './Navbar'
 import { useStateValue } from './Stateprovider'
 import Totalcost from './Totalcost'
 
 export default function Checkout() {
 
+    let navi=useNavigate()
+
     const [{basket,user},dispatch]=useStateValue()
+    const handleshopping=()=>{
+        if(user){
+            navi("/")
+        }
+        else{
+            navi("/login")
+        }
+    }
     
   return (
     <>
     <Navbar/>
+    <h2 className='usersname'>Hello {user?user.email:'Guest'}</h2>
     {basket.length===0?<div className='emptycart'>
         <div className="emptycartimage"><img src="https://cdn-icons-png.flaticon.com/128/3737/3737173.png" alt="" /></div>
     <h1 className='oopstext'>Your Shopping cart is Empty</h1>
-    <Link to="/"><button className='additemsbutton'>Shop Items</button></Link>
+    <button onClick={handleshopping} className='additemsbutton'>{user?'Shop Items':'Login to Shop'}</button>
     </div> :<div className='checkout text-center'>
         
         <div className="checkout_left">
@@ -41,7 +53,7 @@ export default function Checkout() {
         </div>
         <div className="checkout_right">
         <img src="" alt="" />
-        <h2>Hello {user?user.email:'Guest'}</h2><br /><br />    
+        <br /><br />    
             <h4>Your subtotal</h4>
             <Totalcost/>
             <button  className='button'>Proceed to Pay</button>
